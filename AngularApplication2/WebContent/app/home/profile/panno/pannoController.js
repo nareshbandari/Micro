@@ -1,0 +1,11 @@
+angular.module("application")
+.controller("updatepannocontroller",function($scope,$http){
+	$scope.updatepanno=function(){
+		$http.post("setstr1.do?panno="+$scope.name).success(function(){
+			alert("success");
+		})
+		.error(function(){
+			alert("fail");
+		});
+	};
+});
